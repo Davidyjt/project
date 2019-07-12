@@ -4,15 +4,19 @@ body{
 }
 .top{
 	height: 40px;
-	width: 1904px;
+	width: 100%;
 
 	background-color: #333333;
 	position: relative;
 }
+.top .contain{
+	background-color: #333333;
+	height: 40px;
+}
 .top-nav{
 	height: 40px;
 	line-height: 40px;
-	margin-left: 336px;
+	/*margin-left: 336px;*/
 	width: 682px;
 	display: inline-block;
 	overflow: hidden;
@@ -38,9 +42,7 @@ body{
 
 }
 .user-info{
-	right: 460px;
-	top: 0px;
-	position:absolute;
+	float: right;
 }
 
 .user-info-item{
@@ -53,13 +55,15 @@ body{
 
 }
  .top .cart{
-	position: absolute;
-	right:356px; 
-	top:0px;
+	position: relative;
+	/*right:356px; 
+	top:0px;*/
 	float: right;
 	text-align: center;
 	line-height: 40px;
 	color: #b0b0aa;
+	width: 100px;
+	
 
 
 }
@@ -67,6 +71,9 @@ body{
 	background-color: #fff;
 	color: #ff6700;
 	cursor: pointer;
+}
+.top .cart-box{
+	/*position: relative;*/
 }
  .top  .cart .cart-info-item{
 	
@@ -77,6 +84,71 @@ body{
 	
 
 }
+.top  .cart .cart-concent{
+	width: 300px;
+	height: 0px;
+	position: relative;
+	background: #fff;
+	right: 200px;
+	top: 0px;
+	z-index: 999;
+	overflow: hidden;
+	box-shadow: 0px 1px 1px gray;
+
+}
+.top  .cart .cart-empy{
+	color: black;
+	/*vertical-align: middle;*/
+	margin-top: 20px;
+	display: inline-block;
+	z-index: 9999999;
+	display: none;
+}
+/*loading图标开始*/
+ .loading{
+	position: relative;
+	/*display: none;*/
+	width: 3px;
+	height: 20px;
+	margin:20px auto;
+	background: #ff6700;
+	animation: sport 0.3s linear 0s alternate infinite;
+	}
+ .loading:after,.loading:before{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 3px;
+	height: 20px;
+	background: #ff6700;
+	content:"";
+	}
+ .loading:before{
+	margin-left: -10px;
+	transform:scale(1,0.5);
+	animation: sport 0.3s linear 0.3s alternate infinite;
+
+	}
+ .loading:after{
+    margin-left: 10px;
+	transform:scale(1,0.3);
+	animation: sport 0.3s linear 0.6s alternate infinite;
+
+	}
+@keyframes sport{
+	from{
+	transform:scale(1,0.3);
+	opacity: 0.3
+
+	}to{
+	transform:scale(1);
+	opacity: 1;
+
+	}
+}
+/*loading图标结束*/
+
+
 .iconfont cart-box{
 	float: right;
 	color: #b0b0aa;
@@ -89,6 +161,7 @@ body{
 	margin-top: 22px;
 	
 	background-color: #ffff;
+	position: relative;
 
 
 }
@@ -122,12 +195,15 @@ body{
 	color: #333333;
 
 }
+.header .contain .header-nav .header-nav-item:hover{
+	color: #ff6700;
+}
 .header .contain .search{
-	width: 296px;
-	height: 50px;
+	/*width: 296px;
+	height: 50px;*/
 	
 	float: right;
-	margin-top: 3px;
+	/*margin-top: 3px;*/
 	position: relative;
 
 }
@@ -173,7 +249,7 @@ body{
 	line-height: 50px;
 	font-size: 20px;
 	text-align: center;
-	border-left: none;
+	/*border-left: none;*/
 
 }
 .header .contain .search .input-btn .iconfont{
@@ -184,7 +260,7 @@ body{
 .header .contain .search .input-keywords{
 	position: absolute;
 	top: 0px;
-	left: 100px;
+	left: 70px;
 	line-height: 50px;
 	/*background-color: ;
 	background-size: 30px;*/
@@ -249,6 +325,60 @@ body{
 	margin-right: 15px;
 	color: #aaaa;
 }
+.header .header-nav-content{
+	height: 0px;
+	width: 100%;
+	background: #ffff;
+	position: absolute;
+	top: 73px;
+	left: 0px;
+	z-index: 9999999999;
+	box-shadow: 1px 2px 3px rgb(0,0,0,0.1);
+	/*border-top: 1px solid ;*/
+	overflow: hidden;
+
+
+
+}
+.header-nav-content li{
+	width: 200px;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.header-nav-content .img-box{
+	width: 200px;
+	height: 80px;
+	border-right:1px solid gray;
+	text-align: center;
+	margin-top: 30px;
+}
+.header-nav-content img{
+	width: 80px;
+	height: 80px;
+
+}
+.header-nav-content .header-nav-name{
+	text-align: center;
+	color: black;
+
+}
+.header-nav-content .header-nav-price{
+	text-align: center;
+	color: #ff6700;
+
+}
+.header-nav-content .tag{
+	width: 40px;
+	height: 24px;
+	color: #ff6700;
+	border: 1px solid #ff6700;
+	position: absolute;
+	top: -22px;
+	left: 50%;
+	margin-left: -20px;
+	text-align: center;
+}
 
 
 /*我是顶部log结束*/
@@ -280,6 +410,45 @@ body{
 	box-sizing: border-box;
 
 }
+.home .banner .cate-box{
+	position: relative;
+}
+.home .banner .cate-content{
+	position: absolute;
+	left: 234px;
+	top: 0px;
+	height: 100%;
+	/*background: red;*/
+	z-index: 9999999999999;
+	display: none;
+
+}
+
+.home .banner .cate-content li{
+	float: left;
+	width: 160px;
+	height: 100px;
+	background: #fff;
+	position: relative;
+
+}
+.home .banner .cate-content img{
+	width: 80px;
+	height: 100%;
+}
+.home .banner .cate-content span{
+	position: absolute;
+	top: 40px;
+	left:103px;
+	color: black;
+
+}
+.home .banner .cate-content span:active{
+	color: #ff6700;
+
+
+}
+
 .home .banner .cate-item{
 	width: 234px;
 	height: 40px;
@@ -293,7 +462,7 @@ body{
 
 
 }
-.home .banner .cate-item:hover{
+.home .banner .cate-item.active{
 	background-color: #ff6700;
 }
 .home .banner .sep{
@@ -308,7 +477,7 @@ body{
 
 
 }
-.home .banner .carousel{
+/*.home .banner .carousel{
 	width: 100%;
 	height: 100%;
 	
@@ -394,7 +563,70 @@ body{
 	margin-left: 10px;
 }
 
+*/
+.home .banner img{
+	width: 100%;
+	height: 100%;
+}
+.home .banner .leftbtn,.rightbtn{
+	position: absolute;
+	top: 50%;	
+	margin-top: -30px;
+	width: 50px;
+	height: 60px;
+	line-height: 60px;
+	text-align:center;
+	font-size: 30px;
+	color: #fff;
+/*	background-color: rgba(0,0,0,0.3);*/
+	cursor: pointer;
+}
+.home .banner .rightbtn{
+	position: absolute;
+	top: 50%;	
+	margin-top: -30px;
+	width: 50px;
+	height: 60px;
+	line-height: 60px;
+	text-align:center;
+	font-size: 30px;
+	color: #fff;
+/*	background-color: rgba(0,0,0,0.3);*/
+	cursor: pointer;
 
+}
+.home .banner .leftbtn:hover{
+	background-color: rgba(0,0,0,0.3);
+
+}
+.home .banner .rightbtn:hover{
+	background-color: rgba(0,0,0,0.3);
+
+}
+.home .banner .leftbtn{
+	left:234px;
+}
+.home .banner .rightbtn{
+	right: 0;
+}
+
+.home .banner .bottombtn{
+	position: absolute;
+	bottom: 10px;
+	right: 30px;
+}
+.home .banner .bottombtn li{
+	float: right;
+	width: 10px;
+	height: 10px;
+	margin-right: 15px;
+	background:  rgba(0,0,0,0.5);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.home .banner .bottombtn li.active{
+	background: rgba(255,0,0,0.7);
+}
 
 .home .contain .hot{
 	height: 174px;
@@ -420,29 +652,28 @@ text-align:center;
 color: #d3d0c4;
 text-decoration: none;
 position: relative;
+
+
+border:1px solid #5f5750;
+box-sizing: border-box;
 }
-.home .hot .col1-list .right-line:after{
+.home .hot .col1-list-item .right-line{
 	position: absolute;
 	height: 70px;
 	width: 1px;
-	background-color: red;
+	background-color: gray;
 	top: 10px;
 	right: 0px;
-	content: "";
-	display: block;
+
 
 }
-.home .hot .col1-list .bottom-line:after{
+.home .hot .col1-list-item .bottom-line{
 	position: absolute;
-	height: 70px;
-	width: 1px;
-	background-color: red;
-	bottom:0px;
-	right: 0px;
-	content: "";
-	display: block;
-
-
+	height: 1px;
+	width: 70px;
+	background-color: gray;
+	top:90px;
+	right: 5px
 }
 
 .home .hot .sep{
@@ -571,6 +802,8 @@ position: relative;
 .home .bd .col1 img{
 margin: 34px auto;
 margin-left: 100px;
+width:50px;
+height: 50px;
 }
 .home .bd .time-name{
 	text-align:center;
@@ -629,24 +862,32 @@ margin-left: 100px;
 	display: inline-block;
 }
 .home .bd .col2{
-
+overflow: hidden;
 }
 .home .bd .col2 .product-list{
 	
+	width: 2000px;
+	height: 370px;
 }
 .home .bd .product-item{
 	width: 232px;
 	height: 370px;
 /*	background-color: blue;*/
-	float: left;
-	margin-right: 12px;
+	/*float: left;*/
+	margin-right: 10px;
 	text-align:center;
 	background-color: #fafafa;
 	padding:0px 12px;
 	box-sizing: border-box;
+	transition: all 500ms;
+	display: inline-block;
 	
 
 
+}
+.home .bd .product-item:hover{
+	box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+	transform:translateY(-3px) translateX(5px);
 }
 .home .bd .col2 .product-item:nth-child(4){
 	border-top: 2px solid blue;
@@ -875,14 +1116,14 @@ margin-left: 100px;
 	margin-right: 28px;
 
 }
-.more .more-right:hover{
+.more .tab-item-active{
 	
 	border-bottom: 2px solid #ff6700;
 }
 .ele .col1{
 	height: 616px;
 	width: 234px;
-	background-color: blue;
+	/*background-color: blue;*/
 	/*margin-top: 50px*/;
 	float: left;
 	overflow: hidden;
@@ -898,11 +1139,27 @@ margin-left: 100px;
 	position: relative;
 	top: 16px;
 }
+.view{
+	height: 0px;
+	width: 226px;
+	background: #ff6700;
+	bottom: 0px;
+	left: 0px;
+	z-index: 999999;
+	position: absolute;
+	overflow: hidden;
+	transition: all 500ms;
+
+}
 
 .ele .product-item{
 	width: 226px;
 	height: 300px;
+	position: relative;
 	
+}
+.ele .product-item:hover .view{
+height: 100px;
 }
 .ele .col2{
 	position: relative;
